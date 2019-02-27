@@ -1,2 +1,2 @@
 //Initializes array of Pizza types
-var pizzaAry = [Pepperoni]
+var pizzaAry = [Pepperoni, Cheese]
