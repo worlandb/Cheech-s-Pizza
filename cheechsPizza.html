@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cheech's Pizza</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+</head>
+<body>
+    <ul>
+        <li><a href="cheechsPizza.html">Home</a></li>
+        <li><a class='active' href="cheechsPizza.html">Menu</a></li>
+        <li><a href="cheechsPizza.html">Contact</a></li>
+        <li><a href="cheechsPizza.html">About</a></li>
+    </ul>
+    <div id = 'orderForm'>
+    <h1>Cheech's Pizza</h1>
+    <form id = 'orderForm' action = 'cheechsPizza.js'>
+        <fieldset>
+            <legend>Order Information</legend>
+            First Name:<br>
+            <input type="text" id = 'fName' name="firstname" value="" autofocus required>
+            <br><br>
+            Last Name:<br>
+            <input type="text" id = 'lName' name="lastname" value="" required>
+            <br><br>
+            Phone Number<br>
+            <input type="tel" id = 'phNumber' name="phonenumber" placeholder = "123-456-7890" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <br><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>Menu</legend>
+            <br>
+
+            <input type="checkbox" name="p1" value="Bike">Placeholder
+            <br>
+            <input type="checkbox" name="p2" value="Car">Placeholder
+            <br>
+            <input type="checkbox" name="p3" value="Bike">Placeholder
+            <br>
+            <input type="checkbox" name="p4" value="Car">Placeholder
+            <br>
+            <br>
+            <input list="pizzaMenu">
+                    <datalist id="pizzaMenu">
+                        <option value="placeholder">
+                        <option value="placeholder">
+                        <option value="placeholder">
+                        <option value="placeholder">
+                        <option value="placeholder">
+                        <option value="placeholder">
+                    </datalist> 
+        </fieldset>
+        <br>
+        <input type="submit" id = 'orderBtn' value="Place Order">
+        <br>
+        <br>
+        <fieldset>
+                <legend>Summary</legend>
+                <br>
+                <textarea readonly rows="20" cols="50" name="summary" form="orderForm">Order summary will display here...</textarea>
+                <button type="reset" value="Reset">New Order</button>
+        </fieldset>
+    </form> 
+    </div>
+
+    <script src="cheechsPizza.js"></script>
+</body>
+</html>
+
