@@ -1,6 +1,15 @@
 /////// HEAD
 //Initializes array of Pizza types
-var pizzaAry = [Pepperoni, Cheese,]
+var pizzaAry = [Pepperoni, Cheese, Sausage, Supreme, Bacon]
+var select = document.getElementById("pizzaMenu");
+
+for(var i = 0; i < pizzaAry.length; i++) {
+    var pizza = pizzaAry[i];
+    var element = document.createElement("option");
+    element.textContent = pizza;
+    element.value = pizza;
+    select.appendChild(element);
+}
 ///////
 //qwee
 /////// a183b43ead574771f66766c12ddc2babbe61d140
