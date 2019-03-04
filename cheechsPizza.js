@@ -1,57 +1,33 @@
 /////// HEAD
 //Initializes array of Pizza types
-var pizzaAry = [Pepperoni, Cheese, Sausage, Supreme, Bacon]
+var pizzaObj = {
+    Value1 : 'Pepperoni',
+    Value2 : 'Cheese',
+    Value3 : 'Sausage',
+    Value4 : 'Supreme',
+    Valuu5 : 'Bacon'
+}
+ 
 var select = document.getElementById("pizzaMenu");
-
-for(var i = 0; i < pizzaAry.length; i++) {
-    var pizza = pizzaAry[i];
-    var element = document.createElement("option");
-    element.textContent = pizza;
-    element.value = pizza;
-    select.appendChild(element);
+for(index in pizzaObj) {
+    select.options[select.options.length] = new Option(pizzaObj[index], index);
 }
-///////
-//qwee
-/////// a183b43ead574771f66766c12ddc2babbe61d140
-////
-//drop down Number of Pizzas
-////
 
-/*
-var pizzaNum = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]; 
-    
-var sel = document.getElementById('NumberOfPizza');
-for(var i = 0; i < pizzaNum.length; i++) {
-    var opt = document.createElement('option');
-    opt.innerHTML = pizzaNum[i];
-    opt.value = pizzaNum[i];
-    sel.appendChild(num);
+var pizzaNum = {
+    No1 : '1',
+    No2 : '2',
+    No3 : '3',
+    No4 : '4',
+    No5 : '5',
+    No6 : '6',
+    No7 : '7',
+    No8 : '8',
+    No9 : '9',
+    No10 : '10'
 }
-*/
-
-/*
-var select = document.getElementById('NumberOfPizza');
-for (var prop in data) {
-    var option = document.createElement('option');
-    option.innerHTML = data[prop].ProduktName
-    option.value = data[prop].ProduktName;
-    select.append(option)
-}
-*/
-
+ 
 var select = document.getElementById("numberOfPizza");
-select.options[select.options.length] = new Option('1', '2', '3', '4', '5', '6', '7', '8', '9', '10');
-
-var select = document.getElementById("numberOfPizza");
-if(select.options.length > 0) {
-    window.alert("Text: " + select.options[select.selectedIndex].text + "\nValue: " + select.options[select.selectedIndex].value);
+for(index in pizzaNum) {
+    select.options[select.options.length] = new Option(pizzaNum[index], index);
 }
-else {
-    window.alert("Select box is empty");
-}
-////
-//^^ drop down Number of Pizzas ^^
-////
-//funtion for order list
-////
 
